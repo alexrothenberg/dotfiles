@@ -1,5 +1,16 @@
 source ~/.bash_aliases
 
+PATH=$PATH:~/ruby/github/alexrothenberg.github.com/_bin
+
+## ORACLE 
+export ORACLE_HOME=/Users/oracle/oracle/product/10.2.0/db_1
+export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export ORACLE_SID=orcl
+PATH=$PATH:$ORACLE_HOME/bin
+
+export EDITOR=emacs
+export GEM_OPEN_EDITOR=mate
+
 ### RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
