@@ -1,0 +1,6 @@
+TM_STRIP_WHITESPACE_ON_SAVE = true
+softTabs = true
+tabSize = 2
+
+TM_CURRENT_THEME_PATH=/Users/alex/ruby/github/textmate-solarized/Solarized\ \(light\).tmTheme
+theme='38E819D9-AE02-452F-9231-ECC3B204AFD7'
