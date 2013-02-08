@@ -9,6 +9,9 @@
 	excludesfile = /Users/alex/.gitignore
         whitespace = trailing-space,space-before-tab
 
+[init]
+	templatedir = ~/.git_templates
+
 [apply]
   whitespace = fix
 
@@ -24,5 +27,3 @@
 [push]
   # Push current branch even if you've never pushed it before
   default = current
-[init]
-	templatedir = ~/.git_template
