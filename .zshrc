@@ -39,7 +39,7 @@ unsetopt correct_all
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 
-## ORACLE        
+## ORACLE
 export ORACLE_64_HOME=/Users/oracle/oracle/product/10.2.0/db_1
 export ORACLE_32_HOME=/Users/oracle/32_bit/instantclient_10_2
 export ORACLE_HOME=$ORACLE_32_HOME
@@ -66,6 +66,9 @@ alias ksql="kill -9 `ps aux | grep /Applications/SQLDeveloper.app/Contents/Resou
 
 alias be='bundle exec'
 alias bake='bundle exec rake'
+
+alias l='/bin/ls -FG'
+alias ls='/bin/ls -AFG'
 
 
 
