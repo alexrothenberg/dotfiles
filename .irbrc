@@ -6,6 +6,11 @@ IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 
+def ppcaller
+  caller.each {|c| puts c }
+  :pp_caller
+end
+
 if ENV.include?('RAILS_ENV')
   if !Object.const_defined?('RAILS_DEFAULT_LOGGER')
     require 'logger'
@@ -22,13 +27,13 @@ if ENV.include?('RAILS_ENV')
 
 # for rails 3
 elsif defined?(Rails) && !Rails.env.nil?
-  if Rails.logger
-    Rails.logger =Logger.new(STDOUT)
-    ActiveRecord::Base.logger = Rails.logger
-  end
-  if Rails.env == 'test'
-    require 'test/test_helper'
-  end
+#  if Rails.logger
+#    Rails.logger =Logger.new(STDOUT)
+#    ActiveRecord::Base.logger = Rails.logger
+#  end
+#  if Rails.env == 'test'
+#    require 'test/test_helper'
+#  end
 else
   # nothing to do
 end

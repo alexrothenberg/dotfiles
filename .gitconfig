@@ -3,3 +3,26 @@
 	email = alex@alexrothenberg.com
 [color]
 	ui = true
+
+[core]
+	editor=emacs
+	excludesfile = /Users/alex/.gitignore
+        whitespace = trailing-space,space-before-tab
+
+[apply]
+  whitespace = fix
+
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[push]
+  # Push current branch even if you've never pushed it before
+  default = current
+[init]
+	templatedir = ~/.git_template
