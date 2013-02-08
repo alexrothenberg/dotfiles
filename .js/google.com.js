@@ -1,6 +1,6 @@
 // swap github logo with trollface
 // $('input[title=Search]')
-//   .val('Zach Rothenberg')
+//   .val('Zach Rothenberg') 
   
 $('input[name=btnI]')
   .val('Bing Search')
