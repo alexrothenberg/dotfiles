@@ -1,29 +1,58 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# # Path to your oh-my-zsh configuration.
+# ZSH=$HOME/.oh-my-zsh
+# 
+# # Set name of the theme to load.
+# # Look in ~/.oh-my-zsh/themes/
+# # Optionally, if you set this to "random", it'll load a random theme each
+# # time that oh-my-zsh is loaded.
+# ZSH_THEME="gallois" #"robbyrussell"
+# 
+# # Set to this to use case-sensitive completion
+# # CASE_SENSITIVE="true"
+# 
+# # Comment this out to disable weekly auto-update checks
+# # DISABLE_AUTO_UPDATE="true"
+# 
+# # Uncomment following line if you want to disable colors in ls
+# # DISABLE_LS_COLORS="true"
+# 
+# # Uncomment following line if you want to disable autosetting terminal title.
+# # DISABLE_AUTO_TITLE="true"
+# 
+# # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# # Example format: plugins=(rails git textmate ruby lighthouse)
+# plugins=(git bundler brew gem heroku)
+# 
+# source $ZSH/oh-my-zsh.sh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="gallois" #"robbyrussell"
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+source $HOME/.antigen/antigen/antigen.zsh
 
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+# Load the oh-my-zsh's library.
+antigen-lib
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen-bundle git
+antigen-bundle heroku
+antigen-bundle brew
+antigen-bundle gem
+antigen-bundle bundler
+antigen-bundle pip
+antigen-bundle lein
+antigen-bundle command-not-found
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Syntax highlighting bundle.
+antigen-bundle zsh-users/zsh-syntax-highlighting
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bundler brew gem heroku)
+# Load the theme.
+antigen-theme gallois  #robbyrussell
 
-source $ZSH/oh-my-zsh.sh
+# Tell antigen that you're done.
+antigen-apply
+
+
+
+
 
 # Customize to your needs...
 #export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/alex/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302@global/bin:/Users/alex/.rvm/rubies/ruby-1.8.7-p302/bin:/Users/alex/.rvm/bin:/Users/oracle/oracle/product/10.2.0/db_1/bin:/Users/alex/ruby/github/alexrothenberg.github.com/_bin
@@ -71,6 +100,8 @@ alias l='/bin/ls -FG'
 alias ls='/bin/ls -AFG'
 
 
+# [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+  
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
@@ -90,3 +121,8 @@ PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$PATH
 
 # Load som SECRETS (not pushed onto github :)
 source ~/.secrets
+
+
+# XCODE VERSIONING
+BUILD_NUMBER=0
+
