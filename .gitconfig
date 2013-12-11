@@ -23,6 +23,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+  wdiff = diff --word-diff
 
 [push]
   # Push current branch even if you've never pushed it before
