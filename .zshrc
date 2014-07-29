@@ -29,7 +29,7 @@
 source $HOME/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen-lib
+antigen-use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen-bundle git
@@ -55,11 +55,11 @@ antigen-apply
 
 
 # Customize to your needs...
-#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/alex/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302@global/bin:/Users/alex/.rvm/rubies/ruby-1.8.7-p302/bin:/Users/alex/.rvm/bin:/Users/oracle/oracle/product/10.2.0/db_1/bin:/Users/alex/ruby/github/alexrothenberg.github.com/_bin
+#export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/alex/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302@global/bin:/Users/alex/.rvm/rubies/ruby-1.8.7-p302/bin:/Users/alex/.rvm/bin::/Users/alex/ruby/github/alexrothenberg.github.com/_bin
 export PATH=~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/alex/.rvm/bin:/Users/alex/ruby/github/alexrothenberg.github.com/_bin
 
 setopt auto_cd
-cdpath=($HOME $HOME/ruby $HOME/ruby/github $HOME/ssc $HOME/motion)
+cdpath=($HOME $HOME/code $HOME/code/ruby $HOME/code/mdl $HOME/code/motion $HOME/code/github $HOME/code/devops)
 
 # Turn off the spelling correction
 unsetopt correct_all
@@ -69,23 +69,23 @@ unsetopt correct_all
 
 
 ## ORACLE
-export ORACLE_64_HOME=/Users/oracle/oracle/product/10.2.0/db_1
-export ORACLE_32_HOME=/Users/oracle/32_bit/instantclient_10_2
-export ORACLE_HOME=$ORACLE_32_HOME
-export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib
+export ORACLE_HOME=/opt/oracle/instantclient_11_2
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export ORACLE_SID=orcl
 export PATH=$PATH:$ORACLE_HOME/bin
 
 export EDITOR=emacs
-export GEM_OPEN_EDITOR=mate
+export GEM_OPEN_EDITOR=subl
 export BUNDLER_EDITOR=$GEM_OPEN_EDITOR
 export CODE_BUDDY_EDITOR=$GEM_OPEN_EDITOR
 
 ## LATEX
-export PATH=/usr/texbin:$PATH
+export PATH=$PATH:/usr/texbin
 
 ## ALIASES
 alias h="history"
+alias ads='kinit "Alexander Rothenberg"'
+alias adsstatus=klist
 
 function sql_developer_pid {
   ps aux | grep /Applications/SQLDeveloper.app/Contents/Resources/sqldeveloper/sqldeveloper/bin | grep -v grep | cut -c 16-21
@@ -106,18 +106,18 @@ alias ls='/bin/ls -AFG'
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # POSTGRES
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH=$PATH:"/Applications/Postgres.app/Contents/MacOS/bin"
 
 # RAILS/BUNLDER
 export RAILS_GROUPS=debugger
 
 # NPM
-PATH=/usr/local/share/npm/bin:$PATH
+PATH=$PATH:/usr/local/share/npm/bin
 
-# ANDROID
-ANDROID_HOME=~/android/adt-bundle-mac-x86_64
+# ANDROID  - brew install android-sdk then "android" and more stuff
+ANDROID_HOME=/usr/local/opt/android-sdk
 ANDROID_SDK_HOME=$ANDROID_HOME/sdk/
-PATH=$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools:$PATH
+PATH=$PATH:$ANDROID_SDK_HOME/platform-tools:$ANDROID_SDK_HOME/tools
 
 # Load som SECRETS (not pushed onto github :)
 source ~/.secrets
