@@ -1,0 +1,19 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"Better CoffeeScript",
+		"CTags",
+		"Gherkin (Cucumber) Formatter",
+		"GitGutter",
+		"Highlight",
+		"LastModifiedIndicator",
+		"Pretty JSON",
+		"Ruby 1.9 Hash Converter",
+		"Rust",
+		"Solarized Color Scheme",
+		"Theme - Spacegray",
+		"TrailingSpaces"
+	]
+}

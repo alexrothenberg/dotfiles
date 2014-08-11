@@ -1,0 +1,31 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.light.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*~",
+		".*"
+	],
+	"folder_exclude_patterns":
+	[
+		".tmp",
+		".sass-cache",
+		"tmp",
+		"build",
+		".git",
+		"sandi-meter",
+		"target",
+		"dist",
+		"coverage",
+		"bower_components",
+		"node_modules"
+	],
+	"font_size": 13,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
