@@ -31,38 +31,40 @@
 # source $ZSH/oh-my-zsh.sh
 
 
-source $HOME/.antigen/antigen/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
+#source $HOME/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen-use oh-my-zsh
+antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen-bundle git
-antigen-bundle heroku
-antigen-bundle brew
-antigen-bundle gem
-antigen-bundle bundler
-antigen-bundle pip
-antigen-bundle lein
-#antigen-bundle rbenv
-antigen-bundle rvm
-antigen-bundle command-not-found
+antigen bundle git
+antigen bundle heroku
+antigen bundle brew
+antigen bundle gem
+antigen bundle bundler
+antigen bundle pip
+antigen bundle lein
+#antigen bundle rbenv
+antigen bundle rvm
+antigen bundle command-not-found
+antigen bundle ssh-agent
 
 # Syntax highlighting bundle.
-antigen-bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen-theme gallois  #robbyrussell
+antigen theme gallois  #robbyrussell
 
 # Tell antigen that you're done.
-antigen-apply
+antigen apply
 
 
 
 
 
 setopt auto_cd
-cdpath=($HOME $HOME/src $HOME/other_src $HOME/code $HOME/code/ruby $HOME/code/motion $HOME/code/github)
+cdpath=($HOME $HOME/src $HOME/src/toolchest $HOME/other_src $HOME/code $HOME/code/ruby $HOME/code/motion $HOME/code/github)
 
 export PATH=~/src/ops-bootstrap/bin:$PATH
 
@@ -73,7 +75,7 @@ unsetopt correct_all
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 
-## ORACLE
+
 #export ORACLE_HOME=/opt/oracle/instantclient_11_2
 #export DYLD_LIBRARY_PATH=$ORACLE_HOME
 #export ORACLE_SID=orcl
@@ -169,7 +171,7 @@ export PATH=~/bin:$PATH
 export PATH=$PATH:/Users/alexrothenberg/src/toolchest/bin
 
 # start ot check ssh-agent
-ssh-agent
+#ssh-agent
 [ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
 
 export PATH="/usr/local/sbin:$PATH"
