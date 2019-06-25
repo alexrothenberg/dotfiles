@@ -45,7 +45,7 @@ antigen bundle gem
 antigen bundle bundler
 antigen bundle pip
 antigen bundle lein
-#antigen bundle rbenv
+antigen bundle rbenv
 antigen bundle rvm
 antigen bundle command-not-found
 antigen bundle ssh-agent
