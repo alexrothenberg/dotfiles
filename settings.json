@@ -1,37 +1,38 @@
 {
-    "search.exclude": {
-        "**/dist": true,
-        "**/log": true,
-        "**/tmp": true,
-        "**/vendor": true
-    },
-    "files.watcherExclude": {
-        "**/dist/**": true,
-        "**/log/**": true,
-        "**/tmp/**": true,
-        "**/vendor/**": true
-    },
-    "files.exclude": {
-        "**/dist": true,
-        "**/log": true,
-        "**/node_modules": true,
-        "**/tmp": true,
-        "**/vendor": true
-    },
-    "files.autoSave": "onWindowChange",
-    "files.trimTrailingWhitespace": true,
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "workbench.editor.enablePreview": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 2,
-    "[handlebars]": {
-        "editor.formatOnSave": false
-    },
-    "[yaml]": {
-        "editor.formatOnSave": false
-    },
-    "html.format.wrapLineLength": 0,
-    "editor.minimap.enabled": false,
-    "git.autofetch": true
+  "search.exclude": {
+    "**/dist": true,
+    "**/log": true,
+    "**/tmp": true,
+    "**/vendor": true
+  },
+  "files.watcherExclude": {
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/tmp/**": true,
+    "**/vendor/**": true
+  },
+  "files.exclude": {
+    "**/dist": true,
+    "**/log": true,
+    "**/node_modules": true,
+    "**/tmp": true,
+    "**/vendor": true
+  },
+  "files.autoSave": "onWindowChange",
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2,
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "window.zoomLevel": 2,
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  "html.format.wrapLineLength": 0,
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "prettier.eslintIntegration": true,
+  "editor.formatOnSave": true
 }
