@@ -25,6 +25,7 @@
   dump = cat-file -p
   wdiff = diff --word-diff
   l = log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cD)%Creset' --abbrev-commit --date=relative
+  bhist = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 
 [push]
   # Push current branch even if you've never pushed it before
