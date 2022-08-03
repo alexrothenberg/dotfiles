@@ -64,9 +64,9 @@ antigen apply
 
 
 setopt auto_cd
-cdpath=($HOME $HOME/src $HOME/src/toolchest $HOME/other_src $HOME/code $HOME/code/ruby $HOME/code/motion $HOME/code/github)
+cdpath=($HOME $HOME/src $HOME/src/toolchest $HOME/om $HOME/other_src $HOME/code $HOME/code/ruby $HOME/code/github)
 
-export PATH=~/src/ops-bootstrap/bin:$PATH
+export PATH
 
 # Turn off the spelling correction
 unsetopt correct_all
@@ -152,7 +152,7 @@ BUILD_NUMBER=0
 # Customize to your needs...
 #export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/alex/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302/bin:/Users/alex/.rvm/gems/ruby-1.8.7-p302@global/bin:/Users/alex/.rvm/rubies/ruby-1.8.7-p302/bin:/Users/alex/.rvm/bin::/Users/alex/ruby/github/alexrothenberg.github.com/_bin
 #export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
-export PATH=~/bin:~/.cargo/bin:/usr/X11/bin:$PATH
+export PATH=~/bin:~/bin:~/.cargo/bin:/usr/X11/bin:$PATH:~/src/eng-utils/bin
 
 # Iora
 #if [ -f /opt/boxen/env.d/70_hub.sh ]; then
@@ -170,12 +170,15 @@ export PATH=~/bin:$PATH
 
 export PATH=$PATH:/Users/alexrothenberg/src/toolchest/bin
 
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$PATH:$HOME/Library/Python/2.7/bin"
+export PATH=$PATH:$HOME/.mix/escripts
+
 # start ot check ssh-agent
 #ssh-agent
 [ -f $HOME/.chirpstrap/env.sh ] && source $HOME/.chirpstrap/env.sh
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH="$PATH:$HOME/Library/Python/2.7/bin"
 
 ssh-kochiku-worker () {
     local worker_ip=$1
@@ -183,3 +186,8 @@ ssh-kochiku-worker () {
 }
 
 alias pwned='echo "[true, false].map {|pwned| UserPwnage.where(pwned: pwned).map(&:user_id).uniq.count }"'
+export PATH_TO_CHROME_FOR_TESTS="/Applications/Google Chrome Tests.app/Contents/MacOS/Google Chrome"
+
+export USE_SSM_SESSIONS=true
+#export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export PATH="/usr/local/opt/terraform@0.13/bin:$PATH"
