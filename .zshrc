@@ -31,7 +31,7 @@
 # source $ZSH/oh-my-zsh.sh
 
 
-source /usr/local/share/antigen/antigen.zsh
+source $HOME/bin/antigen.zsh
 #source $HOME/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
