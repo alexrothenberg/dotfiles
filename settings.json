@@ -26,7 +26,8 @@
     "editor.formatOnSave": false
   },
   "[ruby]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "rebornix.ruby"
   },
   "[yaml]": {
     "editor.formatOnSave": false
@@ -72,5 +73,14 @@
     "external": true
   },
   "go.toolsManagement.autoUpdate": true,
-  "search.showLineNumbers": true
+  "search.showLineNumbers": true,
+  "editor.stickyScroll.enabled": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.languageServer": {
+
+  },
+  "ruby.useLanguageServer": true,
+  "ruby.rubocop.onSave": false
 }
